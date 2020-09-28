@@ -2,7 +2,7 @@
   "settings": [
     {
       "id": "minspeed",
-      "name": "Minimim movement speed defining migration",
+      "name": "Minimum movement speed defining migration",
       "description": "Insert minimum speed (in m/s)",
       "defaultValue": null,
       "type": "INTEGER"
