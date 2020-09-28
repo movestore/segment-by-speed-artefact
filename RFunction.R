@@ -39,10 +39,12 @@ rFunction <- function(data, minspeed=NULL)
   pdf("speed_artefakt.pdf")
   print(speed.plot)
   dev.off() 
+  logger.info("stored PDF artefact")
 
-  #png("speed_artefakt.png")
-  #print(speed.plot)
-  #dev.off()
-    
+  png("speed_artefakt.png")
+  print(speed.plot)
+  dev.off()
+  logger.info("stored PNG artefact")
+  
   result
 }

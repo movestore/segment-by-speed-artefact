@@ -19,6 +19,16 @@
       {
         "name": "ggplot2"
       }
-	]
-  }
+	  ]
+  },
+  "artefacts": [
+    {
+      "fileName": "speed_artefakt.pdf",
+      "fileType": "PDF"
+    },
+    {
+      "fileName": "speed_artefakt.png",
+      "fileType": "PNG"
+    }
+  ]
 }
