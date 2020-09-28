@@ -1,0 +1,24 @@
+{
+  "settings": [
+    {
+      "id": "minspeed",
+      "name": "Minimim movement speed defining migration",
+      "description": "Insert minimum speed (in m/s)",
+      "defaultValue": null,
+      "type": "INTEGER"
+    }
+  ],
+  "dependencies": {
+    "R": [
+      {
+        "name": "move"
+      },
+      {
+        "name": "foreach"
+      },
+      {
+        "name": "ggplot2"
+      }
+	]
+  }
+}
