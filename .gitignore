@@ -37,3 +37,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# co-pilot SDK
+output.rds
+
+# app artefacts
+speed_artefakt.pdf
+speed_artefakt.png
