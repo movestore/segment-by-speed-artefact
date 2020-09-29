@@ -29,9 +29,9 @@ rFunction <- function(data, minspeed=NULL)
   
   #Artefakt, plot speed histogram with cut-off
   hist.tab <- foreach(datai = data.split, .combine=rbind) %do% {
-    data.frame("speed"=speed(datai),"id"=namesIndiv(datai))
+    data.frame("speed"=speed(datai),"id"=namesIndiv(datai), stringsAsFactors = FALSE)
   }
-  
+  print(class(namesIndiv(datai)))
   speed.plot <- ggplot(hist.tab, aes(x = speed, fill = id)) +
     geom_histogram(position = "identity", alpha = 0.2, bins = 100) +
     geom_vline(xintercept = minspeed,lty=2)

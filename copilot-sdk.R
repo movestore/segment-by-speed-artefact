@@ -17,7 +17,7 @@ args <- list()
 #    args[["password"]] = "any-password"
 
 # Add your arguments of your r function here
-args[["minspeed"]] = 10
+args[["minspeed"]] = 1.1
 
 #################################################################
 #################################################################
