@@ -31,7 +31,10 @@ rFunction <- function(data, minspeed=NULL)
   hist.tab <- foreach(datai = data.split, .combine=rbind) %do% {
     data.frame("speed"=speed(datai),"id"=namesIndiv(datai), stringsAsFactors = FALSE)
   }
-  print(class(namesIndiv(datai)))
+  logger.info(paste0('before: ', class(hist.tab$speed)))
+  hist.tab$speed <- as.numeric(hist.tab$speed)
+  logger.info(paste0('x after: ', class(hist.tab$speed)))
+  logger.info(paste0('y after: ', class(hist.tab$id)))
   speed.plot <- ggplot(hist.tab, aes(x = speed, fill = id)) +
     geom_histogram(position = "identity", alpha = 0.2, bins = 100) +
     geom_vline(xintercept = minspeed,lty=2)
