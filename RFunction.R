@@ -34,10 +34,14 @@ rFunction <- function(data, minspeed=NULL)
   logger.info(paste0('before: ', class(hist.tab$speed)))
   hist.tab$speed <- as.numeric(hist.tab$speed)
   logger.info(paste0('x after: ', class(hist.tab$speed)))
+  logger.info(paste0('y before: ', class(hist.tab$id)))
+  hist.tab$id <- as.numeric(hist.tab$id)
   logger.info(paste0('y after: ', class(hist.tab$id)))
   speed.plot <- ggplot(hist.tab, aes(x = speed, fill = id)) +
     geom_histogram(position = "identity", alpha = 0.2, bins = 100) +
-    geom_vline(xintercept = minspeed,lty=2)
+    geom_vline(xintercept = minspeed,lty=2) +
+    scale_x_discrete() +
+    scale_y_discrete()
   
   pdf("speed_artefakt.pdf")
   print(speed.plot)
