@@ -48,7 +48,7 @@ rFunction <- function(data, minspeed=NULL)
   dev.off() 
   logger.info("stored PDF artefact")
 
-  png(paste0(Sys.getenv(x = "ARTEFACTS_DIR", "/tmp/"), "speed_artefakt.pdf"))
+  png(paste0(Sys.getenv(x = "ARTEFACTS_DIR", "/tmp/"), "speed_artefakt.png"))
   print(speed.plot)
   dev.off()
   logger.info("stored PNG artefact")
