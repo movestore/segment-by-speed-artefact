@@ -43,12 +43,12 @@ rFunction <- function(data, minspeed=NULL)
     scale_x_discrete() +
     scale_y_discrete()
   
-  pdf("speed_artefakt.pdf")
+  pdf(paste0(Sys.getenv(x = "ARTEFACTS_DIR", "/tmp/"), "speed_artefakt.pdf"))
   print(speed.plot)
   dev.off() 
   logger.info("stored PDF artefact")
 
-  png("speed_artefakt.png")
+  png(paste0(Sys.getenv(x = "ARTEFACTS_DIR", "/tmp/"), "speed_artefakt.pdf"))
   print(speed.plot)
   dev.off()
   logger.info("stored PNG artefact")

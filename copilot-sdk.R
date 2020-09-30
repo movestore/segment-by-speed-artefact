@@ -1,9 +1,11 @@
 library(jsonlite)
 source("logger.R")
-source("RFunction.R")
 
 inputFileName = "input.rds"
 outputFileName = "output.rds"
+artefactsDirName <- Sys.getenv(x = "ARTEFACTS_DIR", "/tmp/")
+
+source("RFunction.R")
 
 args <- list()
 #################################################################
