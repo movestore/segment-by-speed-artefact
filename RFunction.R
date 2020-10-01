@@ -1,6 +1,7 @@
 library('move')
 library('foreach')
 library('ggplot2')
+library('stringi')
 
 rFunction <- function(data, minspeed=NULL)
 {
@@ -43,12 +44,12 @@ rFunction <- function(data, minspeed=NULL)
     scale_x_discrete() +
     scale_y_discrete()
   
-  pdf(paste0(Sys.getenv(x = "ARTEFACTS_DIR", "/tmp/"), "speed_artefakt.pdf"))
+  pdf(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"), paste0(stri_rand_strings(5, 5, '[A-Z]'),".pdf")))
   print(speed.plot)
   dev.off() 
   logger.info("stored PDF artefact")
 
-  png(paste0(Sys.getenv(x = "ARTEFACTS_DIR", "/tmp/"), "speed_artefakt.png"))
+  png(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"), "speed_artefakt.png"))
   print(speed.plot)
   dev.off()
   logger.info("stored PNG artefact")

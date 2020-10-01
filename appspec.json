@@ -18,17 +18,11 @@
       },
       {
         "name": "ggplot2"
+      },
+      {
+        "name": "stringi"
       }
 	  ]
   },
-  "artefacts": [
-    {
-      "fileName": "speed_artefakt.pdf",
-      "fileType": "PDF"
-    },
-    {
-      "fileName": "speed_artefakt.png",
-      "fileType": "PNG"
-    }
-  ]
+  "createsArtifacts": true
 }
